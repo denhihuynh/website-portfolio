@@ -1,0 +1,26 @@
+.cv-post-section {
+    width: 100%;
+    padding: 0px 20%;
+}
+
+.post-container {
+    width: 100%;
+}
+
+
+.post {
+    padding: 1px 64px;
+    margin: 0;
+}
+
+.post-border-left {
+    border-left: 5px solid black;
+}
+
+.post-border-right {
+    border-right: 5px solid black;
+}
+
+.bold {
+    font-weight: 600;
+}
