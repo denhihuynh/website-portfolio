@@ -6,40 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-.intro {
-  /* background-color: #6E926E; */
-  background: linear-gradient(135deg, rgba(111, 194, 134, 1),rgba(110, 146, 110, 1));
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.intro-title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 15%;
-  padding: 0;
-}
-
-.intro-title {
-  font-size: 3rem;
-  font-weight: 300;
-  margin: 0 0 16px 0;
-  color: white;
-}
-
-#profile {
-  height: 350px;
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-}
-
 h1 {
   font-weight: 400;
 }

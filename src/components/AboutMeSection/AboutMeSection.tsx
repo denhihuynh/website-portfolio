@@ -1,11 +1,19 @@
-import "./AboutMeSection.css";
 import React, { FC } from "react";
+import styled from "styled-components";
 
 type Props = {};
 
+const Wrapper = styled.section`
+  width: 100%;
+  padding: 16px 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const AboutMeSection: FC<Props> = () => {
   return (
-    <section className="about-me-section">
+    <Wrapper>
       <h2>Hello and welcome</h2>
       <p>
         I'm Denhi. I can't believe that you actually found my page and are still
@@ -19,6 +27,6 @@ export const AboutMeSection: FC<Props> = () => {
         a more detailed resume or for a potential collaboration. Have a great
         day!
       </p>
-    </section>
+    </Wrapper>
   );
 };

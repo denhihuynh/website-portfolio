@@ -1,10 +1,43 @@
-import "./CVPostSection.css";
 import React, { FC, useCallback } from "react";
 import { postYearList, postByYearMapping } from "./CVPosts";
 import { YearLine } from "../";
 import { LineType } from "../YearLine/YearLine";
+import styled from "styled-components";
 
 type Props = {};
+
+const Wrapper = styled.section`
+  width: 100%;
+  padding: 0px 20%;
+`;
+
+type PostContainerProps = {
+  borderTo: "left" | "right";
+  borderThickness: string;
+};
+
+const PostContainer = styled.div<PostContainerProps>`
+  width: 100%;
+  ${(props) =>
+    props.borderTo === "left" &&
+    `border-left: ${props.borderThickness} solid black`}
+  ${(props) =>
+    props.borderTo === "right" &&
+    `border-right: ${props.borderThickness} solid black`}
+`;
+
+const Post = styled.section`
+  padding: 1px 64px;
+  margin: 0;
+`;
+
+const Bold = styled.p`
+  font-weight: 600;
+`;
+
+type Direction = "left" | "right";
+
+const LINE_THICKNESS = "5px";
 
 export const CVPostSection: FC<Props> = () => {
   const getLineType = useCallback((index: number): LineType => {
@@ -18,27 +51,27 @@ export const CVPostSection: FC<Props> = () => {
   }, []);
 
   const getPostBorderSideClassName = useCallback(
-    (index: number): "post-border-left" | "post-border-right" =>
-      index % 2 === 0 ? "post-border-left" : "post-border-right",
+    (index: number): Direction => (index % 2 === 0 ? "left" : "right"),
     []
   );
 
   return (
-    <section className="cv-post-section">
+    <Wrapper>
       {postYearList.map((startYear, yearListIndex) => (
         <>
           {yearListIndex === 0 && (
-            <YearLine lineType={getLineType(yearListIndex)} />
+            <YearLine
+              lineType={getLineType(yearListIndex)}
+              thickness={LINE_THICKNESS}
+            />
           )}
           {postByYearMapping[startYear].map((post, postIndex) => (
-            <div
+            <PostContainer
               key={postIndex}
-              className={[
-                "post-container",
-                getPostBorderSideClassName(yearListIndex),
-              ].join(" ")}
+              borderTo={getPostBorderSideClassName(yearListIndex)}
+              borderThickness={LINE_THICKNESS}
             >
-              <section className="post">
+              <Post>
                 <h2>{post.title}</h2>
                 <h3>{post.role}</h3>
                 {post.description.map((description, index) => (
@@ -46,19 +79,20 @@ export const CVPostSection: FC<Props> = () => {
                 ))}
                 <p>
                   {post.technicalEnv !== "" && (
-                    <p className="bold">Technical environment: </p>
+                    <Bold>Technical environment: </Bold>
                   )}
                   {post.technicalEnv}
                 </p>
-              </section>
-            </div>
+              </Post>
+            </PostContainer>
           ))}
           <YearLine
             startYear={startYear}
             lineType={getLineType(yearListIndex + 1)}
+            thickness={LINE_THICKNESS}
           />
         </>
       ))}
-    </section>
+    </Wrapper>
   );
 };
