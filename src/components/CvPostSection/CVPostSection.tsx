@@ -38,6 +38,7 @@ const Bold = styled.p`
 type Direction = "left" | "right";
 
 const LINE_THICKNESS = "5px";
+const EDGE_DIMENSION = 50;
 
 export const CVPostSection: FC<Props> = () => {
   const getLineType = useCallback((index: number): LineType => {
@@ -63,6 +64,7 @@ export const CVPostSection: FC<Props> = () => {
             <YearLine
               lineType={getLineType(yearListIndex)}
               thickness={LINE_THICKNESS}
+              edgeDimension={EDGE_DIMENSION}
             />
           )}
           {postByYearMapping[startYear].map((post, postIndex) => (
@@ -90,6 +92,7 @@ export const CVPostSection: FC<Props> = () => {
             startYear={startYear}
             lineType={getLineType(yearListIndex + 1)}
             thickness={LINE_THICKNESS}
+            edgeDimension={EDGE_DIMENSION}
           />
         </>
       ))}

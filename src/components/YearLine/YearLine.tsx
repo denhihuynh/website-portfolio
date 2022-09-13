@@ -60,32 +60,39 @@ type Props = {
   startYear?: number;
   lineType: LineType;
   thickness: string;
+  edgeDimension: number;
 };
 
-const DIMENSION = 50;
-
-export const YearLine: FC<Props> = ({ startYear, lineType, thickness }) => {
+export const YearLine: FC<Props> = ({
+  startYear,
+  lineType,
+  thickness,
+  edgeDimension,
+}) => {
   return (
     <YearLineContainer>
       {["left-start", "right-to-left"].includes(lineType) && (
         <div>
-          <LinePadding width={DIMENSION} thickness={thickness} />
-          <EdgeTopLeft dimension={DIMENSION} thickness={thickness} />
+          <LinePadding width={edgeDimension} thickness={thickness} />
+          <EdgeTopLeft dimension={edgeDimension} thickness={thickness} />
         </div>
       )}
       {["left-end", "left-to-right"].includes(lineType) && (
-        <EdgeLeftBottom dimension={DIMENSION} thickness={thickness} />
+        <EdgeLeftBottom dimension={edgeDimension} thickness={thickness} />
       )}
       {lineType === "right" && (
-        <LinePadding width={DIMENSION} thickness={thickness} />
+        <LinePadding width={edgeDimension} thickness={thickness} />
       )}
 
       <HorizontalLineContainer>
-        <LineEdgePadding dimension={DIMENSION} thickness={thickness} />
+        <LineEdgePadding dimension={edgeDimension} thickness={thickness} />
         <HorizontalLine>
           {lineType === "right" && (
             <>
-              <LineEdgePadding dimension={DIMENSION} thickness={thickness} />
+              <LineEdgePadding
+                dimension={edgeDimension}
+                thickness={thickness}
+              />
               <LineHalfHidden />
             </>
           )}
@@ -98,18 +105,18 @@ export const YearLine: FC<Props> = ({ startYear, lineType, thickness }) => {
       </HorizontalLineContainer>
 
       {["left-start", "left-end"].includes(lineType) && (
-        <LinePadding width={DIMENSION} thickness={thickness} />
+        <LinePadding width={edgeDimension} thickness={thickness} />
       )}
       {lineType === "left-to-right" && (
         <div>
-          <LinePadding width={DIMENSION} thickness={thickness} />
-          <EdgeTopRight dimension={DIMENSION} thickness={thickness} />
+          <LinePadding width={edgeDimension} thickness={thickness} />
+          <EdgeTopRight dimension={edgeDimension} thickness={thickness} />
         </div>
       )}
       {["right-to-left", "right"].includes(lineType) && (
-        <EdgeRightBottom dimension={DIMENSION} thickness={thickness} />
+        <EdgeRightBottom dimension={edgeDimension} thickness={thickness} />
       )}
-      <TextCircle diameter={60} dimension={DIMENSION} thickness={thickness}>
+      <TextCircle diameter={60} dimension={edgeDimension} thickness={thickness}>
         {startYear ?? "Now"}
       </TextCircle>
     </YearLineContainer>
