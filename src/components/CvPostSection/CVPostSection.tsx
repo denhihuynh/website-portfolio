@@ -3,12 +3,17 @@ import { postYearList, postByYearMapping } from "./CVPosts";
 import { YearLine } from "../";
 import { LineType } from "../YearLine/YearLine";
 import styled from "styled-components";
+import { BREAKPOINTS } from "../../utils/breakpoints";
 
 type Props = {};
 
 const Wrapper = styled.section`
   width: 100%;
   padding: 0px 20%;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    padding: 0px 16px;
+  }
 `;
 
 type PostContainerProps = {
@@ -29,10 +34,18 @@ const PostContainer = styled.div<PostContainerProps>`
 const Post = styled.section`
   padding: 1px 64px;
   margin: 0;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    padding: 1px 16px;
+  }
 `;
 
 const Bold = styled.p`
   font-weight: 600;
+`;
+
+const Description = styled.p`
+  text-align: justify;
 `;
 
 type Direction = "left" | "right";
@@ -77,7 +90,7 @@ export const CVPostSection: FC<Props> = () => {
                 <h2>{post.title}</h2>
                 <h3>{post.role}</h3>
                 {post.description.map((description, index) => (
-                  <p key={index}>{description}</p>
+                  <Description key={index}>{description}</Description>
                 ))}
                 <p>
                   {post.technicalEnv !== "" && (

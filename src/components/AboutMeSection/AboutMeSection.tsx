@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { BREAKPOINTS } from "../../utils/breakpoints";
 
 type Props = {};
 
@@ -9,6 +10,10 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    padding: 0px 32px;
+  }
 `;
 
 export const AboutMeSection: FC<Props> = () => {

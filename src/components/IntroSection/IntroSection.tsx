@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { BREAKPOINTS } from "../../utils/breakpoints";
 
 type Props = {};
 
@@ -15,6 +16,12 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    padding-top: 30vh;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const TitleContainer = styled.section`
@@ -24,6 +31,11 @@ const TitleContainer = styled.section`
   align-items: flex-start;
   margin-left: 15%;
   padding: 0;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    margin: 16px;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -31,6 +43,10 @@ const Title = styled.h1`
   font-weight: 300;
   margin: 0 0 16px 0;
   color: white;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    font-size: 2rem;
+  }
 `;
 
 const Image = styled.img`
@@ -38,6 +54,14 @@ const Image = styled.img`
   position: absolute;
   right: 10%;
   bottom: 0;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    height: 250px;
+    position: relative;
+    left: 0;
+    right; 0;
+    align-self: center;
+  }
 `;
 
 export const IntroSection: FC<Props> = () => {
