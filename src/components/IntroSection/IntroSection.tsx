@@ -44,7 +44,7 @@ const Title = styled.h1`
   margin: 0 0 16px 0;
   color: white;
 
-  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     font-size: 2rem;
   }
 `;
