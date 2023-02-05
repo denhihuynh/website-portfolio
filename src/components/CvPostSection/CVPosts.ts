@@ -8,11 +8,21 @@ type CVPost = {
 
 const CVPosts: CVPost[] = [
   {
-    title: "MoliStreaming AB",
-    role: "IOS Developer / Web developer",
+    title: "IKEA AB",
+    role: "Senior frontend developer",
     description: [
-      "Moli is a social media platform that aims to take live streaming to the next level by introducing live video, mobile screen sharing, and audio to an unlimited amount of viewers. In a world where a smartphone is a personal canvas. Moli takes a seemingly lonely activity done on your phone to a social activity shared with family, friends, and your extended community.",
+      "Developed impactful user experience for IKEA using static generation and headless CMS. Contributed to IKEA's expansion into clean energy market by developing landing pages for new offerings.",
       "Developed the mobile app and web frontend. Migrated the app from react- native to swiftUI after introduction of more complex use cases. Took the app to 150k total downloads and 60k monthly active users",
+    ],
+    startYear: 2022,
+    technicalEnv:
+      "React, Typescript, GatsbyJS, Contentful, NX, GraphQL, Github actions, SCSS, Storybook, Cypress",
+  },
+  {
+    title: "MoliStreaming AB",
+    role: "IOS Developer / Senior web developer",
+    description: [
+      "Developed mobile app and web frontend for Moli, a social media platform with live video and audio sharing. Migrated from React-Native to SwiftUI, resulting in 150K total downloads and 60K monthly active users.",
     ],
     startYear: 2021,
     technicalEnv:
@@ -20,9 +30,9 @@ const CVPosts: CVPost[] = [
   },
   {
     title: "IKEA AB",
-    role: "Frontend developer",
+    role: "Senior Frontend developer",
     description: [
-      "IKEA is a Swedish retail company specialising in affordable furniture.",
+      "Developed self-service reclamation functionality for IKEA, with a focus on frontend development. Used IKEA's design system and implemented unit tests for code quality and reliability.",
     ],
     startYear: 2020,
     technicalEnv:
@@ -32,7 +42,7 @@ const CVPosts: CVPost[] = [
     title: "Boblberg A/S",
     role: "Technical advisor",
     description: [
-      "Boblberg is a company that aims to help people connect to reduce loneliness and improve mental health. They have created a digital platform to assist people in finding communities for their interests. Boblberg works closely with the municipalities of Denmark and the red cross. ",
+      "Contributed to Boblberg project as technical advisor to improve mental health through their digital platform. Implemented best practices for React- native, linting tool for code quality, and coached the team on SEO and accessibility. Delivered presentations and workshops to enhance team skills.",
     ],
     startYear: 2020,
     technicalEnv:
@@ -42,7 +52,7 @@ const CVPosts: CVPost[] = [
     title: "A.P. Møller-Mærsk A/S",
     role: "Frontend Developer",
     description: [
-      "Maersk is a Danish business conglomerate with activities in the transport, logistics, and energy sectors. Maersk has been the world's largest container ship and supply vessel operator since 1996. StarConnect is one of Maersk's most ambitious digitalization projects to lower the fuel costs of their entire fleet.",
+      "Contributed to the success of Maersk's StarConnect project, a digitalization initiative to lower fleet fuel costs through advanced tracking tools. Assisted with frontend web application development, improved code review process, and expedited feedback on new features to increase efficiency.",
     ],
     startYear: 2020,
     technicalEnv:
@@ -52,8 +62,7 @@ const CVPosts: CVPost[] = [
     title: "Daniel Wellington AB - Logistics and supply chain",
     role: "Fullstack Developer",
     description: [
-      "Daniel Wellington (DW) is well-known for its minimalistic, elegant, and timeless watch design. Its social media presence has taken the world by storm and created a world-known fashion brand since 2011.",
-      "As part of their work within counterfeit prevention, they have a system to trace how watches move from the factory to different warehouses and finally to their end customers. With the help of this system, they can track potential thefts and the authenticity of watches.",
+      "As a part of the logistics team at Daniel Wellington (DW), a world-renowned fashion brand known for its minimalistic, elegant, and timeless watch designs, I contributed to DW's efforts in counterfeit prevention and theft detection by developing backend solutions for traceability system and working on web and mobile applications for seamless integration and consistent user experience.",
     ],
     startYear: 2019,
     technicalEnv:
@@ -63,7 +72,7 @@ const CVPosts: CVPost[] = [
     title: "Daniel Wellington AB - Wengy B2B",
     role: "Fullstack Developer",
     description: [
-      "Being a global brand, DW works with many distributors worldwide. To simplify business to the business flow, they have a built platform, Wengy, for automating flows relating to distributors.",
+      "Contributed to DW as a developer, played a key role in migrating Wengy platform from Angular to React, streamlining tech department technologies. Developed backend solutions to support new workflows for launching watch sales in new countries, enhancing B2B flows with global distributors.",
     ],
     startYear: 2018,
     technicalEnv:
@@ -73,7 +82,7 @@ const CVPosts: CVPost[] = [
     title: "Daniel Wellington AB - Marketing-tech",
     role: "Fullstack Developer",
     description: [
-      "One of the puzzle pieces to Daniel Wellington's success is its strong marketing strategy, primarily on social platforms through influencers. Today, they collaborate with influencers from all over the world. Daniel Wellington has a department of so-called market coordinators whose job is to coordinate and follow up on all collaborations with influencers. Daniel Wellington has a proprietary platform to manage all the partnerships.",
+      "Contributed to Daniel Wellington's marketing success by developing an MVP for the company's proprietary influencer partnership management platform. Designed the platform to track and visualize partnerships with influencers globally, and to manage the shipping of watches for their campaigns.",
     ],
     startYear: 2018,
     technicalEnv:
@@ -83,7 +92,7 @@ const CVPosts: CVPost[] = [
     title: "Daniel Wellington - BEAM",
     role: "Fullstack Developer",
     description: [
-      "As a company, DW had a fast global expansion. Therefore, they are modernizing their underlying infrastructure to handle the load required on their systems. Using a serverless microservice solution in AWS combined with a modern frontend solution, they ensured a scalable solution to their demands. The purpose of this change was to reduce the impact between different systems and to have a simple way of replicating information to different e-commerce platforms, logistics partners, and other internal systems. The BEAM team, Business Entities As Micro-services, was formed to realize this change.",
+      "Contributed to BEAM team at Daniel Wellington to modernize infrastructure to handle peak load demands during high-traffic shopping holidays such as Black Friday. Assisted switch to serverless microservice in AWS for scalability and reduced impact. Developed reliable and scalable solutions and provided guidance on quality mindset and agile processes.",
     ],
     startYear: 2017,
     technicalEnv:
@@ -93,7 +102,8 @@ const CVPosts: CVPost[] = [
     title: "Daniel Wellington AB - Marketplace integrations",
     role: "Fullstack Developer",
     description: [
-      "Daniel Wellington sells watches on many e-commerce platforms as a global brand. One of their biggest markets is Asia, where they sell watches and accessories on the T-mall, JD, and Lazada e-commerce platforms. To manage their accounting correctly, they wanted to synchronize orders on these platforms and their Microsoft Dynamics NAV business system.",
+      "As part of my role at DW, I developed integrations between the e-commerce platforms, T-mall, JD, and Lazada, and their business system, Microsoft Dynamics NAV. The goal was to ensure accurate accounting and order management in DW's largest market, Asia.",
+      "I created reliable and scalable solutions that could handle high-volume traffic, and designed the integrations to be easily adaptable for future order integrations."
     ],
     startYear: 2017,
     technicalEnv:
@@ -103,7 +113,7 @@ const CVPosts: CVPost[] = [
     title: "Foreseeti AB",
     role: "Frontend Developer",
     description: [
-      "Foreseeti is a specialist in cyber threat modeling and risk management. Using their securiCAD tools, they can model architecture and quickly find system security flaws.",
+      "Contributed to redesign and development of Foreseeti's website with focus on new content and expertise in cyber threat modeling and risk management. Implemented headless CMS and developed email collection component for website demo of securiCAD software.",
     ],
     startYear: 2017,
     technicalEnv:
@@ -113,30 +123,31 @@ const CVPosts: CVPost[] = [
     title: "Flowbox AB",
     role: "Frontend Developer",
     description: [
-      "Flowbox is a visual e-commerce company that specializes in user-generated content. They help connect companies, primarily in retail, to their followers on social media simply and seamlessly. Flowbox currently has over 70 customers in Europe.",
+      "Contributed to the growth and improvement of Flowbox, a visual e- commerce company specializing in user-generated content.",
+      "Improved the performance and efficiency of their React app through a comprehensive rewrite, resulting in faster loading speed and reduced size. Helped connect companies in the retail industry to their followers on social media with seamless and straightforward solutions."
     ],
     startYear: 2016,
     technicalEnv:
       "JavaScript, ES6, Babel, Webpack, React, HTML5, Yarn, Python, CSS3, MySQL, Flask, AWS, PyCharm, SCSS",
   },
   {
-    title: "Miscalleneous AB",
-    role: "Android Developer",
-    description: [
-      "Miscellaneous is a company located in Malmö which offers a team building activity involving creating a dance choreography with other people. A professional dance artist creates the choreography with 30 years of experience.",
-    ],
-    startYear: 2015,
-    technicalEnv: "Android, Java, SocketIO",
-  },
-  {
     title: "Netlight Consulting AB",
-    role: "Fullstack Developer",
+    role: "Associate manager / Fullstack developer",
     description: [
-      "Netlight Consulting is a successful and independent IT-consultant company that offers solutions to complex problems to companies where IT is a critical part of their business concept. High competence combined with creativity and business sense has made us one of the market's sharpest suppliers.",
-      "Worked as an IT consultant. Helped with coaching other consultants through assignments and held interviews.",
+      "Worked as an IT consultant at Netlight Consulting, a successful IT- consultant company that provides solutions to complex problems for companies where IT is a critical part of their business concept.",
+      "Provided support and guidance to junior consultants throughout project assignments, helping to further their professional development. Conducted successful client interviews, demonstrating strong communication and interpersonal skills.",
     ],
     startYear: 2016,
     technicalEnv: "JavaScript, React, Vue, AWS serverless",
+  },
+  {
+    title: "Miscalleneous AB",
+    role: "Android Developer",
+    description: [
+      "Led the development of the Android app for Miscellaneous' teambuilding activity project. Designed and created the user interface, ensuring alignment with the partially developed iOS app. Ensured the successful delivery of a fully-functional, high-quality Android app from scratch.",
+    ],
+    startYear: 2015,
+    technicalEnv: "Android, Java, SocketIO",
   },
   {
     title: "Lund university",

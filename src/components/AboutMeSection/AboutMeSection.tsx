@@ -19,18 +19,11 @@ const Wrapper = styled.section`
 export const AboutMeSection: FC<Props> = () => {
   return (
     <Wrapper>
-      <p>
-        Hi, I'm Denhi. I can't believe that you actually found my page and are
-        still reading this. Unbelievable. I am a developer who is passionate
-        about web- app- and AWS development. I am a freelancer who is available
-        for contract work sometimes.
-      </p>
-      <p>
-        This page serves as a small summary of my previous experience. A short
-        description of my engagements can be found below. Please contact me for
-        a more detailed resume or for a potential collaboration. Have a great
-        day!
-      </p>
+      Hi, I'm Denhi. 
+      I'm glad you stumbled upon my portfolio website. 
+      I'm a highly passionate web, app, and AWS developer with a strong emphasis on delivering high-quality results. 
+      I offer my expertise as a freelancer and am available for contract work. Here, you'll find a brief overview of my past engagements. 
+      If you're interested in learning more, please don't hesitate to reach out for a comprehensive resume or to discuss potential collaboration opportunities. 
     </Wrapper>
   );
 };

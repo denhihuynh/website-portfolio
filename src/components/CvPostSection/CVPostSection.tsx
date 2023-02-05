@@ -72,7 +72,7 @@ export const CVPostSection: FC<Props> = () => {
   return (
     <Wrapper>
       {postYearList.map((startYear, yearListIndex) => (
-        <>
+        <React.Fragment key={yearListIndex}>
           {yearListIndex === 0 && (
             <YearLine
               lineType={getLineType(yearListIndex)}
@@ -92,12 +92,12 @@ export const CVPostSection: FC<Props> = () => {
                 {post.description.map((description, index) => (
                   <Description key={index}>{description}</Description>
                 ))}
-                <p>
-                  {post.technicalEnv !== "" && (
+                {post.technicalEnv !== "" && (
+                  <>
                     <Bold>Technical environment: </Bold>
-                  )}
-                  {post.technicalEnv}
-                </p>
+                    <p>{post.technicalEnv}</p>
+                  </>
+                )}
               </Post>
             </PostContainer>
           ))}
@@ -107,7 +107,7 @@ export const CVPostSection: FC<Props> = () => {
             thickness={LINE_THICKNESS}
             edgeDimension={EDGE_DIMENSION}
           />
-        </>
+        </React.Fragment>
       ))}
     </Wrapper>
   );
