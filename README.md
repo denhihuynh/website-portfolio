@@ -4,10 +4,10 @@ This project is a portfolio website that showcases my work and experiences to po
 Technology Stack
 The website is built using the following technologies:
 
-[Vite](https://vitejs.dev/) as the build tool.
-[Typescript](https://www.typescriptlang.org/) as the programming language.
-[React](https://reactjs.org/) as the front-end library.
-[Pnpm](https://pnpm.io/) as package manager.
+- [Vite](https://vitejs.dev/) as the build tool.
+- [Typescript](https://www.typescriptlang.org/) as the programming language.
+- [React](https://reactjs.org/) as the front-end library.
+- [Pnpm](https://pnpm.io/) as package manager.
 
 Getting Started
 To get started with the project, clone the repository and install the dependencies.
