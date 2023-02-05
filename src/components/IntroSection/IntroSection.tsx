@@ -7,8 +7,8 @@ type Props = {};
 const Wrapper = styled.section`
   background: linear-gradient(
     135deg,
-    rgba(111, 194, 134, 1),
-    rgba(110, 146, 110, 1)
+    rgba(121, 228, 151, 1),
+    rgba(60, 86, 60, 1)
   );
   height: 100vh;
   width: 100vw;
