@@ -13,7 +13,6 @@ Getting Started
 To get started with the project, clone the repository and install the dependencies.
 ```
 pnpm install
-
 ```
 
 Then, start the development server.
