@@ -1,11 +1,10 @@
 import "./App.css";
-import { IntroSection, CVPostSection, AboutMeSection } from "./components";
+import { IntroSection, CVPostSection } from "./components";
 
 const App = () => {
   return (
     <main>
       <IntroSection />
-      <AboutMeSection />
       <CVPostSection />
     </main>
   );

@@ -70,7 +70,7 @@ export const CVPostSection: FC<Props> = () => {
   );
 
   return (
-    <Wrapper>
+    <Wrapper id="CV-post-section">
       {postYearList.map((startYear, yearListIndex) => (
         <React.Fragment key={yearListIndex}>
           {yearListIndex === 0 && (
@@ -87,16 +87,12 @@ export const CVPostSection: FC<Props> = () => {
               borderThickness={LINE_THICKNESS}
             >
               <Post>
-                <h2>{post.title}</h2>
-                <h3>{post.role}</h3>
+                <h2>{post.title} - {post.role}</h2>
                 {post.description.map((description, index) => (
                   <Description key={index}>{description}</Description>
                 ))}
                 {post.technicalEnv !== "" && (
-                  <>
-                    <Bold>Technical environment: </Bold>
-                    <p>{post.technicalEnv}</p>
-                  </>
+                  <p>Technical environment: {post.technicalEnv}</p>
                 )}
               </Post>
             </PostContainer>

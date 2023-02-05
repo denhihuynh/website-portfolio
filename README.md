@@ -7,6 +7,7 @@ The website is built using the following technologies:
 - [Vite](https://vitejs.dev/) as the build tool.
 - [Typescript](https://www.typescriptlang.org/) as the programming language.
 - [React](https://reactjs.org/) as the front-end library.
+- [Styled components](https://styled-components.com/) for styling.
 - [Pnpm](https://pnpm.io/) as package manager.
 
 Getting Started

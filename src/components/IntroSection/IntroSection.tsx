@@ -18,7 +18,7 @@ const Wrapper = styled.section`
   justify-content: center;
 
   @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
-    padding-top: 30vh;
+    padding-top: 15vh;
     justify-content: space-between;
     align-items: center;
   }
@@ -34,7 +34,6 @@ const TitleContainer = styled.section`
 
   @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
     margin: 16px;
-    align-items: center;
   }
 `;
 
@@ -49,18 +48,55 @@ const Title = styled.h1`
   }
 `;
 
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 30%;
+  color: white;
+
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    font-size: 1rem;
+  }
+`;
+
 const Image = styled.img`
-  height: 350px;
+  height: 600px;
   position: absolute;
   right: 10%;
   bottom: 0;
 
   @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+    height: 500px;
+    position: relative;
+    left: 0;
+    right: 0;
+    align-self: center;
+  }
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     height: 250px;
     position: relative;
     left: 0;
-    right; 0;
+    right: 0;
     align-self: center;
+  }
+`;
+
+const CTAButton = styled.button`
+  background-color: black; /* Green */
+  border: none;
+  border-radius: 16px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
   }
 `;
 
@@ -70,6 +106,14 @@ export const IntroSection: FC<Props> = () => {
       <TitleContainer>
         <Title>Denhi Huynh</Title>
         <Title as="h2">Software developer</Title>
+        <Subtitle> 
+          A web, app and aws developer with a passion for delivering high-quality results. 
+          Check out my portfolio to see my past projects. 
+          Contact me for my resume or to discuss collaboration opportunities.
+        </Subtitle>
+        <a href="#CV-post-section">
+          <CTAButton>Learn more</CTAButton>
+        </a>
       </TitleContainer>
       <Image src="assets/profile-blackwhite.png" alt="profile" />
     </Wrapper>
