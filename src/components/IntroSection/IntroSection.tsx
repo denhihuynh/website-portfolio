@@ -1,15 +1,23 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { BREAKPOINTS } from "../../utils/breakpoints";
+import { keyframes } from "styled-components";
 
 type Props = {};
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px); // Optional: slide up slightly
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const Wrapper = styled.section`
-  background: linear-gradient(
-    135deg,
-    rgba(121, 228, 151, 1),
-    rgba(60, 86, 60, 1)
-  );
+  background: linear-gradient(135deg, #5b9b6c, #314b31);
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -42,6 +50,9 @@ const Title = styled.h1`
   font-weight: 300;
   margin: 0 0 16px 0;
   color: white;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-out forwards;
+  animation-delay: 0.5s;
 
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     font-size: 2rem;
@@ -53,6 +64,9 @@ const Subtitle = styled.p`
   font-weight: 300;
   width: 30%;
   color: white;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-out forwards;
+  animation-delay: 0.8s;
 
   @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
     width: 100%;
@@ -68,6 +82,9 @@ const Image = styled.img`
   position: absolute;
   right: 10%;
   bottom: 0;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-out forwards;
+  animation-delay: 1.2s;
 
   @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
     height: 500px;
@@ -87,16 +104,20 @@ const Image = styled.img`
 `;
 
 const CTAButton = styled.button`
-  background-color: black; /* Green */
+  background-color: #162919;
   border: none;
-  border-radius: 16px;
+  border-radius: 20px;
   color: white;
-  padding: 15px 32px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  @media screen and (max-width: ${BREAKPOINTS.SMALL_SCREEN}) {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: black;
   }
 `;
 
@@ -107,9 +128,10 @@ export const IntroSection: FC<Props> = () => {
         <Title>Denhi Huynh</Title>
         <Title as="h2">Software developer</Title>
         <Subtitle>
-          A web, app and aws developer with a passion for delivering
-          high-quality results. Check out my portfolio to see my past projects.
-          Contact me for my resume or to discuss collaboration opportunities.
+          A web, app and cloud (aws & gcp) developer with a passion for
+          delivering high-quality results. Check out my portfolio to see my past
+          projects. Contact me for my resume or to discuss collaboration
+          opportunities.
         </Subtitle>
         <a href="#CV-post-section">
           <CTAButton>Learn more</CTAButton>
