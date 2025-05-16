@@ -8,6 +8,71 @@ type CVPost = {
 
 const CVPosts: CVPost[] = [
   {
+    title: "Sony AB",
+    role: "Techlead / Architect / Senior developer",
+    description: [
+      "Designed and developed a minimum viable product for a waste management platform to simplify internal waste management at Sony.",
+      "Led technical decisions, defined architecture, technology stack, and processes to ensure scalability, maintainability, and future-proofing.",
+    ],
+    startYear: 2024,
+    technicalEnv:
+      "Figma, Langchain, OpenAI API, Neo4j, Docker, AWS Route 53, AWS Cloudfront, AWS SES, AWS Cognito, AWS S3, AWS Lambda, AWS SQS, Swagger/OpenAPI, AWS DynamoDB, Terraform, Typescript, Esbuild, Jest, Vite, React-i18next, React-navigation, Github actions",
+  },
+  {
+    title: "Sony AB",
+    role: "Techlead / Architect / Senior developer",
+    description: [
+      "Designed and built a sustainability engagement platform emphasizing entertainment. Spearheaded the team, established agile methodologies, and oversaw agile ceremonies.",
+      "Laid the groundwork for an initial architecture, including a scalable serverless microservice backend, a hybrid mobile app, and web pages for end users and content creators.",
+    ],
+    startYear: 2023,
+    technicalEnv:
+      "AWS Route 53, AWS Cloudfront, AWS SES, AWS Cognito, AWS API gateway, AWS S3, AWS Lambda, AWS SQS, Swagger/OpenAPI, AWS DynamoDB, Terraform, NextJS, React-native, Fastlane, Typescript, Esbuild, Jest, Vite, React-i18next, React-navigation, Github actions",
+  },
+  {
+    title: "Maastricht University / Ruso B.V.",
+    role: "Techlead / Scrum master / Senior developer",
+    description: [
+      "Developed a mobile application as a foundational tool for a course at Maastricht University. The app incorporates improvisational theater exercises to foster connectedness among first-year students.",
+      "Integrated with Contentful CMS and GraphQL. Implemented automated deployment for seamless updates to both Apple App Store and Google Play Store.",
+    ],
+    startYear: 2023,
+    technicalEnv:
+      "React-native, Typescript, Contentful, Fastlane, Jest, React-i18next, React-navigation, GraphQL",
+  },
+  {
+    title: "Cross Solutions AB",
+    role: "App developer / Designer",
+    description: [
+      "Designed and developed a mobile application to seamlessly retrieve observation data from bluetooth-connected devices, enhancing remote patient monitoring capabilities.",
+      "Streamlined the process by implementing a CI/CD pipeline for automatic deployment to both Apple App Store and Google Play Store.",
+    ],
+    startYear: 2023,
+    technicalEnv:
+      "Figma, Figma prototype, Design system, React-native, Native modules, Typescript, Java, Docker, Gitlab CI, Fastlane, Jest, React-i18next, React-navigation",
+  },
+  {
+    title: "IKEA AB / Kruso Digital AB",
+    role: "Senior frontend developer",
+    description: [
+      "Developed impactful user experience for IKEA using static generation and headless CMS. Contributed to IKEA's expansion into clean energy market by developing landing pages for new offerings.",
+      "Reduced IKEA's annual licensing costs by €220,000 through improving the usage of Contentful.",
+    ],
+    startYear: 2022,
+    technicalEnv:
+      "React, Typescript, GatsbyJS, Contentful, NX, GraphQL, Github actions, SCSS, Storybook, Cypress",
+  },
+  {
+    title: "XI Consulting AB",
+    role: "Founder / CEO",
+    description: [
+      "Supporting businesses with crafting scalable, efficient, and innovative solutions in web, mobile, and cloud computing.",
+      "Specializing in turning ideas into reality, ensuring digital presence is both functional and impactful.",
+    ],
+    startYear: 2022,
+    technicalEnv: "Design, Web, Cloud, Mobile",
+  },
+  {
     title: "IKEA AB",
     role: "Senior frontend developer",
     description: [
@@ -103,7 +168,7 @@ const CVPosts: CVPost[] = [
     role: "Fullstack Developer",
     description: [
       "As part of my role at DW, I developed integrations between the e-commerce platforms, T-mall, JD, and Lazada, and their business system, Microsoft Dynamics NAV. The goal was to ensure accurate accounting and order management in DW's largest market, Asia.",
-      "I created reliable and scalable solutions that could handle high-volume traffic, and designed the integrations to be easily adaptable for future order integrations."
+      "I created reliable and scalable solutions that could handle high-volume traffic, and designed the integrations to be easily adaptable for future order integrations.",
     ],
     startYear: 2017,
     technicalEnv:
@@ -124,7 +189,7 @@ const CVPosts: CVPost[] = [
     role: "Frontend Developer",
     description: [
       "Contributed to the growth and improvement of Flowbox, a visual e- commerce company specializing in user-generated content.",
-      "Improved the performance and efficiency of their React app through a comprehensive rewrite, resulting in faster loading speed and reduced size. Helped connect companies in the retail industry to their followers on social media with seamless and straightforward solutions."
+      "Improved the performance and efficiency of their React app through a comprehensive rewrite, resulting in faster loading speed and reduced size. Helped connect companies in the retail industry to their followers on social media with seamless and straightforward solutions.",
     ],
     startYear: 2016,
     technicalEnv:

@@ -106,9 +106,9 @@ export const IntroSection: FC<Props> = () => {
       <TitleContainer>
         <Title>Denhi Huynh</Title>
         <Title as="h2">Software developer</Title>
-        <Subtitle> 
-          A web, app and aws developer with a passion for delivering high-quality results. 
-          Check out my portfolio to see my past projects. 
+        <Subtitle>
+          A web, app and aws developer with a passion for delivering
+          high-quality results. Check out my portfolio to see my past projects.
           Contact me for my resume or to discuss collaboration opportunities.
         </Subtitle>
         <a href="#CV-post-section">
